@@ -3,7 +3,7 @@ import "./App.css";
 import { DropDownListComponent } from "@syncfusion/ej2-react-dropdowns";
 import { useState } from "react";
 import { daysOfWeek, hours, weekOrMonth, daysOfMonth } from "./Data";
-import {cronDayOfMonth} from "./helperFunctions"
+import {cronDayOfMonth, crondayOfWeek, cronHour} from "./helperFunctions"
 
 function App() {
   const [date, setDate] = useState({
@@ -32,31 +32,6 @@ function App() {
     });
   };
 
-  // const cronDayOfMonth = (day) => {
-  //   if(day === "every day of the month") {
-  //     return "*"
-  //   } else {
-  //     return Number(day)
-  //   }
-  // }
-
-  const crondayOfWeek = (day) => {
-    if(day === "every day of the week") {
-      return "*"
-    } else {
-      const index = daysOfWeek.indexOf(day) - 1
-      return index
-    }
-  }
-
-  const cronHour = (hour) => {
-    if(hour === "every hour") {
-      return "0"
-    } else {
-      return hours.indexOf(hour)
-    }
-  }
-
 
   const cronDate = () => {
     const crMin = "0"
@@ -64,8 +39,6 @@ function App() {
     const dOfM = cronDayOfMonth(date.dayOfMonth);
     const dOfW = crondayOfWeek(date.dayOfWeek);
     const crHour = cronHour(date.hour);
-
-    const fullCronDate = (crMin + " " + crMon + " " + dOfM + " " + dOfW + " " + crHour);
     setFullCronDate(fullCronDate => (crMin + " " + crHour + " " + dOfM+ " " + crMon + " " + dOfW))
   }
 
