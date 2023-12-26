@@ -66,7 +66,7 @@ function App() {
     const crHour = cronHour(date.hour);
 
     const fullCronDate = (crMin + " " + crMon + " " + dOfM + " " + dOfW + " " + crHour);
-    setFullCronDate(fullCronDate => (crMin + " " + crHour + " " + crMon + " " + dOfM + " " + dOfW))
+    setFullCronDate(fullCronDate => (crMin + " " + crHour + " " + dOfM+ " " + crMon + " " + dOfW))
   }
 
   return (
