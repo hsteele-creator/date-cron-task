@@ -1,10 +1,41 @@
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-react-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-react-calendars/styles/material.css";
+
+
 .App {
+  text-align: center;
+  display: flex;
+  padding: 50px;
+  align-items: center;
+}
+
+.full-cron {
   text-align: center;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+button {
+  background-color: #FF4D4E;
+  border: none;
+  color: white;
+  height: 28px;
+  margin: 0 10px;
+  border-radius: 4px;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 @media (prefers-reduced-motion: no-preference) {
